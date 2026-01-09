@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BOLLACKS ($BOLX)</title>
+  <meta name="description" content="BOLLACKS ($BOLX) — a British Solana meme coin with absolutely no utility." />
+  <style>
+    :root { --bg:#0b0b0d; --fg:#f2f2f2; --muted:#b9b9b9; --card:#141419; --line:#2a2a33; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 600px at 20% -10%, #1d1d27 0%, transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, #24131b 0%, transparent 55%),
+                  var(--bg);
+      color:var(--fg);
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:14px; }
+    .mark { font-weight:900; letter-spacing:0.08em; text-transform:uppercase; font-size:14px; color:var(--muted); }
+    .btns { display:flex; gap:10px; flex-wrap:wrap; }
+    a.btn { display:inline-block; padding:10px 14px; border:1px solid var(--line); border-radius:14px;
+      color:var(--fg); text-decoration:none; background: rgba(255,255,255,0.03); }
+    a.btn:hover { background: rgba(255,255,255,0.07); }
+    .hero { margin-top: 38px; padding: 26px; border:1px solid var(--line); background: rgba(255,255,255,0.03);
+      border-radius: 22px; }
+    h1 { margin:0 0 10px; font-size: 44px; line-height:1.05; letter-spacing:0.04em; text-transform:uppercase; }
+    .tag { margin:0; color:var(--muted); font-size:18px; }
+    .grid { margin-top:18px; display:grid; grid-template-columns: 1fr; gap:14px; }
+    @media (min-width: 860px) { .grid { grid-template-columns: 1.2fr 0.8fr; } }
+    .card { padding:18px; border:1px solid var(--line); background: rgba(20,20,25,0.7); border-radius: 18px; }
+    h2 { margin:0 0 10px; font-size:18px; letter-spacing:0.06em; text-transform:uppercase; }
+    p { margin:0 0 10px; color: var(--muted); }
+    code { color: var(--fg); background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 10px; }
+    .list { margin:0; padding-left: 18px; color: var(--muted); }
+    footer { margin-top:24px; color: var(--muted); font-size: 13px; }
+    .small { font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="mark">BOLLACKS • $BOLX • SOLANA</div>
+      <div class="btns">
+        <a class="btn" href="PASTE_RAYDIUM_LINK_HERE" target="_blank" rel="noreferrer">Buy $BOLX</a>
+        <a class="btn" href="https://solscan.io/token/PASTE_MINT_ADDRESS_HERE" target="_blank" rel="noreferrer">View on Solscan</a>
+        <a class="btn" href="PASTE_X_LINK_HERE" target="_blank" rel="noreferrer">X (Twitter)</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>BOLLACKS<br><span style="font-size:22px;color:#b9b9b9;letter-spacing:0.12em;">($BOLX)</span></h1>
+      <p class="tag">A British meme coin on Solana with absolutely no utility.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>About</h2>
+        <p>BOLLACKS is built on British humour, sarcasm, and zero promises.</p>
+        <p>No roadmap. No “future utility”. No buzzwords. Just <strong style="color:#f2f2f2">BOLLACKS</strong>.</p>
+        <p class="small">If you’re looking for fundamentals, you’ve misunderstood the name.</p>
+      </div>
+
+      <div class="card">
+        <h2>Token</h2>
+        <p><strong style="color:#f2f2f2">Chain:</strong> Solana</p>
+        <p><strong style="color:#f2f2f2">Supply:</strong> 1,000,000,000</p>
+        <p><strong style="color:#f2f2f2">Decimals:</strong> 6</p>
+        <p><strong style="color:#f2f2f2">Mint:</strong> <code>PASTE_MINT_ADDRESS_HERE</code></p>
+        <ul class="list">
+          <li>Mint authority: disabled</li>
+          <li>Freeze authority: disabled</li>
+          <li>No taxes. No promises.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>What we promise</h2>
+        <p>Nothing. Absolutely nothing.</p>
+        <p>If you lose money, that’s unfortunate — but still bollacks.</p>
+      </div>
+
+      <div class="card">
+        <h2>Disclaimer</h2>
+        <p>This is a meme coin. Not financial advice. Do your own research.</p>
+        <p class="small">If you’re here for a whitepaper, you’re in the wrong pub.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> BOLLACKS ($BOLX). Made in Britain. Minted on Solana.
+    </footer>
+  </div>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
