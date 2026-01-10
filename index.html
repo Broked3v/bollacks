@@ -5,43 +5,99 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BOLLACKS ($BOLX)</title>
   <meta name="description" content="BOLLACKS ($BOLX) — a British Solana meme coin with absolutely no utility." />
+
   <style>
     :root { --bg:#0b0b0d; --fg:#f2f2f2; --muted:#b9b9b9; --card:#141419; --line:#2a2a33; }
     * { box-sizing:border-box; }
-    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: radial-gradient(1200px 600px at 20% -10%, #1d1d27 0%, transparent 60%),
-                  radial-gradient(900px 500px at 90% 10%, #24131b 0%, transparent 55%),
-                  var(--bg);
+    body {
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #1d1d27 0%, transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, #24131b 0%, transparent 55%),
+        var(--bg);
       color:var(--fg);
     }
     .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
-    header { display:flex; justify-content:space-between; align-items:center; gap:14px; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; }
     .mark { font-weight:900; letter-spacing:0.08em; text-transform:uppercase; font-size:14px; color:var(--muted); }
     .btns { display:flex; gap:10px; flex-wrap:wrap; }
-    a.btn { display:inline-block; padding:10px 14px; border:1px solid var(--line); border-radius:14px;
-      color:var(--fg); text-decoration:none; background: rgba(255,255,255,0.03); }
-    a.btn:hover { background: rgba(255,255,255,0.07); }
-    .hero { margin-top: 38px; padding: 26px; border:1px solid var(--line); background: rgba(255,255,255,0.03);
-      border-radius: 22px; }
-    h1 { margin:0 0 10px; font-size: 44px; line-height:1.05; letter-spacing:0.04em; text-transform:uppercase; }
-    .tag { margin:0; color:var(--muted); font-size:18px; }
+    a.btn {
+      display:inline-block; padding:10px 14px; border:1px solid var(--line);
+      border-radius:14px; color:var(--fg); text-decoration:none;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+    }
+    a.btn:hover { background: rgba(255,255,255,0.08); }
+
+    /* HERO with your ticker art */
+    .hero{
+      margin-top: 22px;
+      padding: 26px;
+      border:1px solid var(--line);
+      border-radius: 22px;
+
+      background:
+        linear-gradient(180deg, rgba(11,11,13,0.10) 0%, rgba(11,11,13,0.72) 60%, rgba(11,11,13,0.92) 100%),
+        url("assets/bolx-hero.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      min-height: 380px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      overflow:hidden;
+    }
+    h1 {
+      margin:0 0 10px;
+      font-size: 46px;
+      line-height:1.05;
+      letter-spacing:0.05em;
+      text-transform:uppercase;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.65);
+    }
+    .tag {
+      margin:0;
+      color:var(--muted);
+      font-size:18px;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.65);
+      max-width: 48ch;
+    }
+
     .grid { margin-top:18px; display:grid; grid-template-columns: 1fr; gap:14px; }
     @media (min-width: 860px) { .grid { grid-template-columns: 1.2fr 0.8fr; } }
-    .card { padding:18px; border:1px solid var(--line); background: rgba(20,20,25,0.7); border-radius: 18px; }
+
+    .card {
+      padding:18px;
+      border:1px solid var(--line);
+      background: rgba(20,20,25,0.7);
+      border-radius: 18px;
+    }
     h2 { margin:0 0 10px; font-size:18px; letter-spacing:0.06em; text-transform:uppercase; }
     p { margin:0 0 10px; color: var(--muted); }
     code { color: var(--fg); background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 10px; }
     .list { margin:0; padding-left: 18px; color: var(--muted); }
+    .small { font-size: 13px; color: var(--muted); }
     footer { margin-top:24px; color: var(--muted); font-size: 13px; }
-    .small { font-size: 13px; }
+
+    .img {
+      width:100%;
+      border-radius:16px;
+      border:1px solid var(--line);
+      display:block;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
       <div class="mark">BOLLACKS • $BOLX • SOLANA</div>
       <div class="btns">
-        <a class="btn" href="PASTE_RAYDIUM_LINK_HERE" target="_blank" rel="noreferrer">Buy $BOLX</a>
+        <!-- Replace these 3 links -->
+        <a class="btn" href="PASTE_PUMP_LINK_HERE" target="_blank" rel="noreferrer">Buy $BOLX</a>
         <a class="btn" href="https://solscan.io/token/PASTE_MINT_ADDRESS_HERE" target="_blank" rel="noreferrer">View on Solscan</a>
         <a class="btn" href="PASTE_X_LINK_HERE" target="_blank" rel="noreferrer">X (Twitter)</a>
       </div>
@@ -74,12 +130,16 @@
       </div>
 
       <div class="card">
-        <h2>What we promise</h2>
-        <p>Nothing. Absolutely nothing.</p>
-        <p>If you lose money, that’s unfortunate — but still bollacks.</p>
+        <h2>Ticker art</h2>
+        <img class="img" src="assets/bolx-hero.png" alt="BOLLACKS ($BOLX) ticker art" />
+        <p class="small" style="margin-top:10px;">Official ticker art. No utility. Just bollacks.</p>
       </div>
 
       <div class="card">
+        <h2>What we promise</h2>
+        <p>Nothing. Absolutely nothing.</p>
+        <p>If you lose money, that’s unfortunate — but still bollacks.</p>
+        <hr style="border:none;border-top:1px solid var(--line);margin:14px 0;">
         <h2>Disclaimer</h2>
         <p>This is a meme coin. Not financial advice. Do your own research.</p>
         <p class="small">If you’re here for a whitepaper, you’re in the wrong pub.</p>
@@ -90,6 +150,7 @@
       © <span id="y"></span> BOLLACKS ($BOLX). Made in Britain. Minted on Solana.
     </footer>
   </div>
+
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
