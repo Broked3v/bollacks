@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BOLLACKS ($BOLX)</title>
-  <meta name="description" content="BOLLACKS ($BOLX) — a British Solana meme coin with absolutely no utility." />
+  <meta name="description" content="BOLLACKS ($BOLX) — a British Solana meme coin with absolutely no utility.">
 
   <style>
     :root{
@@ -14,176 +14,195 @@
       --card:#141419;
       --line:#2a2a33;
     }
+
     *{ box-sizing:border-box; }
+
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
       background:
         radial-gradient(1200px 600px at 20% -10%, #1d1d27 0%, transparent 60%),
         radial-gradient(900px 500px at 90% 10%, #24131b 0%, transparent 55%),
         var(--bg);
       color:var(--fg);
     }
+
     .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 26px 18px 60px;
+      max-width:980px;
+      margin:0 auto;
+      padding:24px 18px 60px;
     }
 
+    /* HEADER */
     header{
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      gap:14px;
+      justify-content:space-between;
+      gap:12px;
       flex-wrap:wrap;
-      margin-bottom: 14px;
+      margin-bottom:12px;
     }
+
     .mark{
       font-weight:900;
       letter-spacing:0.08em;
       text-transform:uppercase;
       font-size:13px;
       color:var(--muted);
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(255,255,255,0.03);
     }
+
     .btns{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
     }
+
     a.btn{
-      display:inline-block;
       padding:10px 14px;
       border:1px solid var(--line);
       border-radius:14px;
       color:var(--fg);
       text-decoration:none;
       background: rgba(255,255,255,0.03);
-      backdrop-filter: blur(6px);
     }
-    a.btn:hover{ background: rgba(255,255,255,0.08); }
 
+    a.btn:hover{
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* HERO IMAGE */
     .hero{
-      margin-top: 10px;
-    }
-    .hero img{
-  width:100%;
-  display:block;
-  border-radius:22px;
-  border:1px solid var(--line);
-  max-height: 340px;
-  object-fit: cover;
-  object-position: center;
+      margin-top:10px;
     }
 
+    .hero img{
+      width:100%;
+      display:block;
+      border-radius:22px;
+      border:1px solid var(--line);
+      max-height:340px;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    /* INTRO */
     .lead{
-      margin-top: 14px;
+      margin-top:14px;
       padding:18px;
       border:1px solid var(--line);
       background: rgba(20,20,25,0.7);
-      border-radius: 18px;
-    }
-    h1{
-      margin:0 0 8px;
-      font-size: 38px;
-      line-height: 1.05;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-    .tag{
-      margin:0;
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 60ch;
+      border-radius:18px;
     }
 
-    .grid{
-      margin-top: 14px;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
+    h1{
+      margin:0 0 8px;
+      font-size:38px;
+      letter-spacing:0.05em;
+      text-transform:uppercase;
     }
-    @media (min-width: 860px){
-      .grid{ grid-template-columns: 1.2fr 0.8fr; }
-      h1{ font-size: 44px; }
-      .tag{ font-size: 18px; }
+
+    .tag{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width:60ch;
+    }
+
+    /* GRID */
+    .grid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+
+    @media (min-width:860px){
+      .grid{ grid-template-columns:1.2fr 0.8fr; }
+      h1{ font-size:44px; }
+      .tag{ font-size:18px; }
     }
 
     .card{
       padding:18px;
       border:1px solid var(--line);
       background: rgba(20,20,25,0.7);
-      border-radius: 18px;
+      border-radius:18px;
     }
+
     h2{
       margin:0 0 10px;
       font-size:16px;
       letter-spacing:0.06em;
       text-transform:uppercase;
     }
+
     p{
       margin:0 0 10px;
-      color: var(--muted);
+      color:var(--muted);
     }
+
     ul{
       margin:0;
-      padding-left: 18px;
-      color: var(--muted);
+      padding-left:18px;
+      color:var(--muted);
     }
+
     code{
-      color: var(--fg);
       background: rgba(255,255,255,0.06);
-      padding: 2px 6px;
-      border-radius: 10px;
-      word-break: break-all;
+      padding:2px 6px;
+      border-radius:10px;
+      color:var(--fg);
+      word-break:break-all;
     }
+
     .small{
-      font-size: 13px;
-      color: var(--muted);
+      font-size:13px;
+      color:var(--muted);
     }
-    .hr{
-      height:1px;
-      background: var(--line);
-      margin: 14px 0;
-      border:0;
-    }
+
     footer{
-      margin-top: 22px;
-      color: var(--muted);
-      font-size: 13px;
+      margin-top:22px;
+      font-size:13px;
+      color:var(--muted);
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
+
     <header>
       <div class="mark">BOLLACKS • $BOLX • SOLANA</div>
       <div class="btns">
-        <!-- Replace these when live -->
-        <a class="btn" href="PASTE_PUMP_LINK_HERE" target="_blank" rel="noreferrer">Buy $BOLX</a>
-        <a class="btn" href="https://solscan.io/token/PASTE_MINT_ADDRESS_HERE" target="_blank" rel="noreferrer">View on Solscan</a>
-        <a class="btn" href="PASTE_X_LINK_HERE" target="_blank" rel="noreferrer">X (Twitter)</a>
+        <a class="btn" href="#" title="Pump.fun link">Buy</a>
+        <a class="btn" href="#" title="Solscan link">Solscan</a>
+        <a class="btn" href="#" title="X link">X</a>
       </div>
     </header>
 
-    <!-- HERO IMAGE (your ticker art) -->
     <section class="hero">
-      <img src="assets/bolx-hero.png" alt="BOLLACKS ($BOLX) ticker art">
+      <img src="assets/bolx-hero.png" alt="BOLLACKS ($BOLX)">
     </section>
 
-    <!-- CLEAN TEXT BELOW (no fighting the art) -->
     <section class="lead">
-      <h1>BOLLACKS <span style="color:#b9b9b9;font-size:22px;letter-spacing:0.12em;">($BOLX)</span></h1>
-      <p class="tag">A British meme coin on Solana with absolutely no utility. No roadmap. No promises. Just bollacks.</p>
+      <h1>BOLLACKS <span style="color:#b9b9b9;font-size:22px;">($BOLX)</span></h1>
+      <p class="tag">
+        A British meme coin on Solana with absolutely no utility.
+        No roadmap. No promises. Just bollacks.
+      </p>
     </section>
 
     <section class="grid">
       <div class="card">
         <h2>About</h2>
-        <p>BOLLACKS is built on British humour, sarcasm, and zero promises.</p>
-        <p>No roadmap. No “future utility”. No buzzwords.</p>
+        <p>BOLLACKS is built on British humour, sarcasm, and zero expectations.</p>
+        <p>No AI. No roadmap. No pretending.</p>
         <p><strong style="color:#f2f2f2">Just BOLLACKS.</strong></p>
-        <p class="small">If you’re looking for fundamentals, you’ve misunderstood the name.</p>
+        <p class="small">If you’re here for fundamentals, you’ve misunderstood the name.</p>
       </div>
 
       <div class="card">
@@ -191,39 +210,36 @@
         <p><strong style="color:#f2f2f2">Chain:</strong> Solana</p>
         <p><strong style="color:#f2f2f2">Supply:</strong> 1,000,000,000</p>
         <p><strong style="color:#f2f2f2">Decimals:</strong> 6</p>
-        <p><strong style="color:#f2f2f2">Mint:</strong> <code>PASTE_MINT_ADDRESS_HERE</code></p>
+        <p><strong style="color:#f2f2f2">Mint:</strong> <code>COMING_SOON</code></p>
         <ul>
-          <li>No taxes</li>
           <li>No utility</li>
+          <li>No taxes</li>
           <li>No nonsense</li>
         </ul>
-
-        <div class="hr"></div>
-
-        <h2>Disclaimer</h2>
-        <p>This is a meme coin. Not financial advice.</p>
-        <p class="small">If you’re here for a whitepaper, you’re in the wrong pub.</p>
       </div>
 
       <div class="card">
         <h2>What we promise</h2>
-        <p>Nothing. Absolutely nothing.</p>
+        <p>Nothing.</p>
+        <p>Absolutely nothing.</p>
         <p>If you lose money, that’s unfortunate — but still bollacks.</p>
       </div>
 
       <div class="card">
-        <h2>Links</h2>
-        <p><strong style="color:#f2f2f2">Pump:</strong> <code>PASTE_PUMP_LINK_HERE</code></p>
-        <p><strong style="color:#f2f2f2">X:</strong> <code>PASTE_X_LINK_HERE</code></p>
-        <p><strong style="color:#f2f2f2">Solscan:</strong> <code>https://solscan.io/token/PASTE_MINT_ADDRESS_HERE</code></p>
+        <h2>Disclaimer</h2>
+        <p>This is a meme coin. Not financial advice.</p>
+        <p class="small">If you’re here for a whitepaper, you’re in the wrong pub.</p>
       </div>
     </section>
 
     <footer>
       © <span id="y"></span> BOLLACKS ($BOLX). Made in Britain. Minted on Solana.
     </footer>
+
   </div>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
